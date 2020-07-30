@@ -1,5 +1,5 @@
 {% set name = "yaq-traits" %}
-{% set version = "2020.7.2" %}
+{% set version = "2020.7.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e4c347b5b1d663f4af912aa55ec5cd2d0bc015c888d11ffd12e96936c65e9480
+  sha256: 55f886a4c71a86d72b21cb9af28dcf88333d7f9698f206de997858cadebc331e
 
 build:
   number: 0
