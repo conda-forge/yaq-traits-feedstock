@@ -11,7 +11,7 @@ source:
   sha256: 956c0a370b4f8c53c4783c537910a346ae9ff90f59ace92d23bc41c3eea5773f
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - yaq-traits=yaq_traits.__main__:main
@@ -21,7 +21,7 @@ requirements:
   host:
     - click
     - colorama
-    - fastavro
+    - fastavro >=1.4.0
     - prettytable
     - toml
     - flit
@@ -30,7 +30,7 @@ requirements:
   run:
     - click
     - colorama
-    - fastavro
+    - fastavro >=1.4.0
     - prettytable
     - python >=3.6
     - toml
