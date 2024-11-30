@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: b22269e2a82e760879407b2fa5772776d22728cb4437cb8cc57830de1edc5eb6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - yaq-traits=yaq_traits.__main__:main
@@ -26,13 +26,13 @@ requirements:
     - toml
     - flit
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - click
     - colorama
     - fastavro >=1.4.0
     - prettytable
-    - python >=3.6
+    - python >={{ python_min }}
     - toml
 
 test:
@@ -43,6 +43,7 @@ test:
     - yaq-traits --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://yaq.fyi
